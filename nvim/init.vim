@@ -8,7 +8,7 @@ if dein#load_state('~/.config/nvim/dein')
 
   " Shougo
   call dein#add('~/.config/nvim/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/deoplete.nvim')
+  " uncomment for deoplete call dein#add('Shougo/deoplete.nvim')
   call dein#add('Shougo/denite.nvim')
   call dein#add('Shougo/deol.nvim')
   call dein#add('Shougo/defx.nvim')
@@ -19,16 +19,23 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
 
-  " deoplete
-  call dein#add('deoplete-plugins/deoplete-go', {'build': 'make'})
-  call dein#add('deoplete-plugins/deoplete-jedi')
-  call dein#add('deoplete-plugins/deoplete-clang')
-  call dein#add('deoplete-plugins/deoplete-docker')
-  call dein#add('deoplete-plugins/deoplete-zsh')
-  call dein#add('autozimu/LanguageClient-neovim', {
-    \'rev': 'next',
-    \'build': 'bash install.sh',
-  \})
+  " uncomment for deoplete
+  " call dein#add('deoplete-plugins/deoplete-go', {'build': 'make'})
+  " call dein#add('deoplete-plugins/deoplete-jedi')
+  " call dein#add('deoplete-plugins/deoplete-clang')
+  " call dein#add('deoplete-plugins/deoplete-docker')
+  " call dein#add('deoplete-plugins/deoplete-zsh')
+  " call dein#add('autozimu/LanguageClient-neovim', {
+  "  \'rev': 'next',
+  "  \'build': 'bash install.sh',
+  " \})
+
+  " coc
+  call dein#add('neoclide/coc.nvim', {'build': 'npm install'})
+  call dein#add('neoclide/coc-tsserver', {'build': 'npm install'})
+  call dein#add('neoclide/coc-rls', {'build': 'npm install'})
+  call dein#add('neoclide/coc-python', {'build': 'npm install'})
+  call dein#add('neoclide/coc-json', {'build': 'npm install'})
 
   " defx
   call dein#add('kristijanhusak/defx-icons')
@@ -41,7 +48,7 @@ if dein#load_state('~/.config/nvim/dein')
 
   " typescript
   call dein#add('HerringtonDarkholme/yats.vim')
-  call dein#add('mhartington/nvim-typescript', {'build': './install.sh'})
+  " uncomment for deoplete call dein#add('mhartington/nvim-typescript', {'build': './install.sh'})
 
   " scrooloose
   call dein#add('scrooloose/nerdcommenter')
@@ -70,18 +77,6 @@ endif
 if dein#check_install()
   call dein#install()
 endif
-
-call deoplete#custom#option('sources', {
-\ '_': ['ale'],
-\ 'rust': ['LanguageClient', 'ale'],
-\ 'svelte': ['LanguageClient', 'ale']
-\})
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
-call deoplete#custom#source('LanguageClient', 'rank', 500)
-call deoplete#custom#source('LanguageClient',
-  \'min_pattern_length',
-\1)
-call deoplete#custom#source('LanguageClient', 'sorters', [])
 
 filetype plugin indent on
 syntax enable
@@ -116,19 +111,34 @@ call defx#custom#option('_', {
 	\'columns': 'git:mark:indent:icons:filename:type',
 \})
 
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_serverCommands = {
-  \'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-  \'svelte': ['bash', '-c', '. ~/.nvm/nvm.sh && nvm exec svelteserver']
-\}
-let g:LanguageClient_rootMarkers = {
-  \'svelte': ['package.json'],
-  \'rust': ['Cargo.toml'],
-\}
+" ============================
+" Uncomment if you want deoplete
+" let g:LanguageClient_autoStart = 1
+" let g:LanguageClient_serverCommands = {
+"   \'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+"   \'svelte': ['bash', '-c', '. ~/.nvm/nvm.sh && nvm exec svelteserver']
+" \}
+" let g:LanguageClient_rootMarkers = {
+"   \'svelte': ['package.json'],
+"   \'rust': ['Cargo.toml'],
+" \}
 
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+" let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+" call deoplete#custom#option('sources', {
+" \ '_': ['ale'],
+" \ 'rust': ['LanguageClient', 'ale'],
+" \ 'svelte': ['LanguageClient', 'ale']
+" \})
+" call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+" call deoplete#custom#source('LanguageClient', 'rank', 500)
+" call deoplete#custom#source('LanguageClient',
+"   \'min_pattern_length',
+" \1)
+" call deoplete#custom#source('LanguageClient', 'sorters', [])
+" ============================
+
 let g:defx_git#indicators = {
   \'Modified'  : '✹',
   \'Staged'    : '✚',
