@@ -16,8 +16,9 @@ if dein#load_state('~/.config/nvim/dein')
   " uncomment once implemented
   " call dein#add('Shougo/deoppet.nvim')
   " remove when deoppet.nvim is implemented
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
+  " or uncomment if you want to use snippets with deoplete
+  " call dein#add('Shougo/neosnippet.vim')
+  " call dein#add('Shougo/neosnippet-snippets')
 
   " uncomment for deoplete
   " call dein#add('deoplete-plugins/deoplete-go', {'build': 'make'})
@@ -36,6 +37,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('neoclide/coc-rls', {'build': 'npm install'})
   call dein#add('neoclide/coc-python', {'build': 'npm install'})
   call dein#add('neoclide/coc-json', {'build': 'npm install'})
+  call dein#add('neoclide/coc-snippets', {'build': 'npm install'})
 
   " defx
   call dein#add('kristijanhusak/defx-icons')
