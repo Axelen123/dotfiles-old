@@ -9,12 +9,17 @@ I usually use VSCode but sometimes when I am in the terminal I just use neovim b
 - sudo access
 - [nerd font](#fonts)
 - MacOS only: [homebrew](https://brew.sh) and XCode CLI Tools (`xcode-select --install`)
+You also need to configure your terminal
+to run your shell as a login shell (Gnome Terminal: Menu -> Preferences -> PROFILE (default: Unnamed) -> Command -> Run my shell as a login shell)
+
 ### Installation
 ```sh
 # Make sure to backup your .dotfiles folder if you have one (and other files too incase something goes wrong)
 git clone https://github.com/Axelen123/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install.sh
+chsh -s /usr/bin/zsh
+exec zsh --login
 ```
 
 If you only want the NVIM config:
