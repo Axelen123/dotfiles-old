@@ -68,7 +68,7 @@ if [ -z "$NO_BISON"]
 then
     $PKG_CMD bison
 fi
-
+git submodule update --init --recursive
 cp -r `dirname $0`/.zsh-custom ~/.zsh-custom
 echo "Backing up .zshrc (if it exists)"
 (mv ~/.zshrc ~/.zshrc.zsh-backup > /dev/null 2>&1) || true
