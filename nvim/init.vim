@@ -207,6 +207,14 @@ function! Term() abort
 endfunction
 
 nnoremap <C-t> :call Term()<CR>
+inoremap <C-s> <Esc> :w<CR>i
+nnoremap <C-s> :w
+tnoremap <C-a> <Esc> <C-\><C-n><C-w>w
+nnoremap <C-a> <C-w>w
+inoremap <C-a> <C-w>w
+tnoremap <C-d> <Esc> <C-\><C-n><C-w>k
+nnoremap <C-d> <C-w>k
+inoremap <C-d> <C-w>k
 
 function! Open(context) abort
   if defx#is_directory()
