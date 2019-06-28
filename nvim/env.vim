@@ -107,3 +107,4 @@ let g:closetag_regions = {
 
 let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
+let g:vim_jsx_pretty_colorful_config = 1
