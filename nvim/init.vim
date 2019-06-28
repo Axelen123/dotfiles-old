@@ -60,7 +60,12 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('tpope/vim-fugitive')
   call dein#add('tpope/vim-eunuch')
   call dein#add('tpope/vim-surround', {'on_map': {'n' : ['cs', 'ds', 'ys']}})
-  
+
+  " fugitive
+  call dein#add('tpope/vim-rhubarb')
+  call dein#add('junegunn/gv.vim')
+  call dein#add('sodapopcan/vim-twiggy')
+
   " airline
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
