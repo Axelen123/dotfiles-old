@@ -69,7 +69,12 @@ then
     $PKG_CMD bison
 fi
 git submodule update --init --recursive
-cp -r `dirname $0`/.zsh-custom ~/.zsh-custom
+if [ -z "$NO_SYMLINK" ]
+then
+    ln -s `dirname $0`/.zsh-custom ~/.zsh-custom
+else
+    cp -r `dirname $0`/.zsh-custom ~/.zsh-custom
+fi
 echo "Backing up .zshrc (if it exists)"
 (mv ~/.zshrc ~/.zshrc.zsh-backup > /dev/null 2>&1) || true
 echo "Backed up .zshrc"
@@ -106,11 +111,22 @@ cargo install lsd
 echo "Backing up nvim config (if it exists)"
 (mv ~/.config/nvim ~/.config/nvim.backup > /dev/null 2>&1) || true
 echo "Backed up nvim config"
-cp -r `dirname $0`/nvim ~/.config/nvim
+
+if [ -z "$NO_SYMLINK" ]
+then
+    ln -s `dirname $0`/nvim ~/.config/nvim
+else
+    cp -r `dirname $0`/nvim ~/.config/nvim
+fi
 cd ~/.config/nvim
 ./install.sh
 cd -
-cp `dirname $0`/.zshrc ~/.zshrc
+if [ -z "$NO_SYMLINK" ]
+then
+    ln -s `dirname $0`/.zshrc ~/.zshrc
+else
+    cp `dirname $0`/.zshrc ~/.zshrc
+fi
 echo "Installation complete. Running postinstall checks..."
 TERM=xterm-256color zsh -c `echo "$(dirname $0)/postinstall.sh"`
 echo "Done. Make sure to check the logs for errors."

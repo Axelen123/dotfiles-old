@@ -17,6 +17,9 @@ to run your shell as a login shell (Gnome Terminal: Menu -> Preferences -> PROFI
 # Make sure to backup your .dotfiles folder if you have one (and other files too incase something goes wrong)
 git clone https://github.com/Axelen123/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
+# Warning: the install script will symlink ~/.zsh-custom to REPO_LOCATION/.zsh-custom and ~/.config/nvim to REPO_LOCATION/nvim
+# If you don't want to symlink then run "NO_SYMLINK=true ./install.sh" instead.
+# The script will try to install bison. If bison is not in your package repository then run "NO_BISON=true ./install.sh" instead.
 ./install.sh
 chsh -s /usr/bin/zsh
 exec zsh --login
