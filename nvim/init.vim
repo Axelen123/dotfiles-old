@@ -71,6 +71,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('w0rp/ale')
   call dein#add('jiangmiao/auto-pairs')
   call dein#add('mattn/emmet-vim')
+  call dein#add('ryanoasis/vim-devicons')
 
   call dein#end()
   call dein#save_state()
@@ -195,6 +196,10 @@ let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
 let g:go_auto_sameids = 1
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
+let g:webdevicons_enable_denite = 1
 
 augroup defxConfig
   autocmd!
