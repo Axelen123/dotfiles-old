@@ -9,6 +9,7 @@
         "vue",
         "svelte"
     ],
+    "coc.preferences.formatOnSaveFiletypes": ["css", "vue", "svelte", "javascript", "javascriptreact", "typescript", "typescriptreact", "html", "rust", "json", "yaml"],
     "languageserver": {
         "golang": {
             "command": "gopls",
