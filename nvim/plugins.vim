@@ -45,15 +45,18 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('neoclide/coc-tabnine', {'build': 'npm install'})
   call dein#add('iamcco/coc-angular', {'build': 'sh -c "npm install && npm run build"'})
 
-  " defx
-  call dein#add('kristijanhusak/defx-icons')
-  call dein#add('kristijanhusak/defx-git')
-
+  " coc + denite
+  call dein#add('neoclide/coc-denite', {'build': 'npm install'})
+  
   " denite
   call dein#add('neoclide/denite-git')
   call dein#add('neoclide/denite-extra')
   call dein#add('neoclide/npm.nvim')
 
+  " defx
+  call dein#add('kristijanhusak/defx-icons')
+  call dein#add('kristijanhusak/defx-git')
+  
   " languages
   call dein#add('HerringtonDarkholme/yats.vim')
   call dein#add('othree/yajs.vim')
