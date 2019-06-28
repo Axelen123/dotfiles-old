@@ -36,6 +36,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('neoclide/coc-json', {'build': 'npm install'})
   call dein#add('neoclide/coc-html', {'build': 'npm install'})
   call dein#add('neoclide/coc-snippets', {'build': 'npm install'})
+  call dein#add('neoclide/coc-vetur', {'build': 'npm install'})
 
   " defx
   call dein#add('kristijanhusak/defx-icons')
@@ -52,6 +53,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('burner/vim-svelte')
   call dein#add('ekalinin/Dockerfile.vim')
   call dein#add('MaxMEllon/vim-jsx-pretty')
+  call dein#add('posva/vim-vue')
   call dein#add('fatih/vim-go')
   " uncomment for deoplete 
   " call dein#add('mhartington/nvim-typescript', {'build': './install.sh'})
