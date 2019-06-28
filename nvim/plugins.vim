@@ -34,6 +34,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('neoclide/coc-rls', {'build': 'npm install'})
   call dein#add('neoclide/coc-python', {'build': 'npm install'})
   call dein#add('neoclide/coc-json', {'build': 'npm install'})
+  call dein#add('neoclide/coc-html', {'build': 'npm install'})
   call dein#add('neoclide/coc-snippets', {'build': 'npm install'})
 
   " defx
