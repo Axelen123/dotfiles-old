@@ -20,7 +20,9 @@ set nobackup
 set noswapfile
 set nowrap
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript.jsx setlocal ts=2 sts=2 sw=2
 autocmd Filetype typescript setlocal ts=2 sts=2 sw=2
+autocmd Filetype typescript.tsx setlocal ts=2 sts=2 sw=2
 autocmd Filetype svelte setlocal ts=2 sts=2 sw=2
 au FileType go set noexpandtab
 au FileType go set shiftwidth=4
