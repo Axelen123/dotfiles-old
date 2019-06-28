@@ -24,8 +24,11 @@ autocmd Filetype javascript.jsx setlocal ts=2 sts=2 sw=2
 autocmd Filetype typescript setlocal ts=2 sts=2 sw=2
 autocmd Filetype typescript.tsx setlocal ts=2 sts=2 sw=2
 autocmd Filetype svelte setlocal ts=2 sts=2 sw=2
-autocmd BufRead,BufNewFile *.vue setlocal filetype=html
-autocmd BufRead,BufNewFile *.vue setlocal ts=2 sts=2 sw=2
+let g:vue_disable_pre_processors=1
+autocmd FileType vue syntax sync fromstart
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue
+autocmd filetype vue setlocal ts=2 sts=2 sw=2
+
 au FileType go set noexpandtab
 au FileType go set shiftwidth=4
 au FileType go set softtabstop=4
