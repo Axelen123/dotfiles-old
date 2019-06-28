@@ -46,7 +46,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('iamcco/coc-angular', {'build': 'sh -c "npm install && npm run build"'})
 
   " coc + denite
-  call dein#add('neoclide/coc-denite', {'build': 'npm install'})
+  call dein#add('neoclide/coc-denite')
   
   " denite
   call dein#add('neoclide/denite-git')
