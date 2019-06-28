@@ -63,7 +63,7 @@ if dein#load_state('~/.config/nvim/dein')
 
   " scrooloose
   call dein#add('scrooloose/nerdcommenter')
-  call dein#add('scrooloose/syntastic')
+  " call dein#add('scrooloose/syntastic')
 
   " tpope
   call dein#add('tpope/vim-fugitive')
