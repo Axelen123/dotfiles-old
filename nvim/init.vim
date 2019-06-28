@@ -48,9 +48,13 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('neoclide/denite-extra')
   call dein#add('neoclide/npm.nvim')
 
-  " typescript
+  " languages
   call dein#add('HerringtonDarkholme/yats.vim')
-  " uncomment for deoplete call dein#add('mhartington/nvim-typescript', {'build': './install.sh'})
+  call dein#add('othree/yajs.vim')
+  call dein#add('burner/vim-svelte')
+  call dein#add('fatih/vim-go')
+  " uncomment for deoplete 
+  " call dein#add('mhartington/nvim-typescript', {'build': './install.sh'})
 
   " scrooloose
   call dein#add('scrooloose/nerdcommenter')
@@ -71,8 +75,6 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('vim-airline/vim-airline-themes')
 
   " other
-  call dein#add('burner/vim-svelte')
-  call dein#add('fatih/vim-go')
   call dein#add('rakr/vim-one')
   call dein#add('w0rp/ale')
   call dein#add('jiangmiao/auto-pairs')
