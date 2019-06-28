@@ -40,6 +40,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('neoclide/coc-emmet', {'build': 'npm install'})
   call dein#add('neoclide/coc-snippets', {'build': 'npm install'})
   call dein#add('neoclide/coc-vetur', {'build': 'npm install'})
+  call dein#add('neoclide/coc-yaml', {'build': 'npm install'})
 
   " defx
   call dein#add('kristijanhusak/defx-icons')
