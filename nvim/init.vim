@@ -57,6 +57,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('scrooloose/syntastic')
 
   " tpope
+  call dein#add('tpope/vim-fugitive')
   call dein#add('tpope/vim-eunuch')
   call dein#add('tpope/vim-surround', {'on_map': {'n' : ['cs', 'ds', 'ys']}})
   
