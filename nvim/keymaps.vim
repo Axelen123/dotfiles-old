@@ -31,3 +31,7 @@ inoremap <C-a> <Esc> <C-w>w
 tnoremap <C-q> <C-w>k
 nnoremap <C-q> <C-w>k
 inoremap <C-q> <Esc> <C-w>k
+
+" coc format
+vmap <leader>f <Plug>(coc-format-selected)
+nmap <leader>f <Plug>(coc-format-selected)
