@@ -12,9 +12,8 @@ My NeoVim Configuration
 - git
 
 ## Installation
-Once you have installed all the above you can clone my config to `~/.config/nvim`:
+Clone the repo and copy this folder to `~/.config/nvim` and run:
 ```sh
-git clone https://github.com/Axelen123/nvim-config.git ~/.config/nvim
 cd ~/.config/nvim
 ./install.sh
 cd -
