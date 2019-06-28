@@ -55,8 +55,8 @@ au FileType go set tabstop=4
 " call deoplete#custom#source('LanguageClient', 'sorters', [])
 " ============================
 
-source defx.vim
-source denite.vim
+call LD('defx.vim')
+call LD('denite.vim')
 
 let g:ruby_host_prog = 'rvm all do neovim-ruby-host'
 let g:airline_theme = 'one'
