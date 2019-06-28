@@ -42,6 +42,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('neoclide/coc-snippets', {'build': 'npm install'})
   call dein#add('neoclide/coc-vetur', {'build': 'npm install'})
   call dein#add('neoclide/coc-yaml', {'build': 'npm install'})
+  call dein#add('neoclide/coc-tabnine', {'build': 'npm install'})
   call dein#add('iamcco/coc-angular', {'build': 'sh -c "npm install && npm run build"'})
 
   " defx
