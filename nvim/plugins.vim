@@ -65,6 +65,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('MaxMEllon/vim-jsx-pretty')
   call dein#add('fatih/vim-go')
   call dein#add('posva/vim-vue')
+  call dein#add('chr4/nginx.vim')
   " uncomment for deoplete 
   " call dein#add('mhartington/nvim-typescript', {'build': './install.sh'})
 
