@@ -7,7 +7,7 @@ set splitbelow
 set termguicolors
 set background=dark
 set number
-set relativenumber
+set cursorline
 set incsearch
 set ignorecase
 set smartcase
