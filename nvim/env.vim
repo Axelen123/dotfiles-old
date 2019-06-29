@@ -28,7 +28,7 @@ let g:vue_disable_pre_processors=1
 autocmd FileType vue syntax sync fromstart
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue
 autocmd filetype vue setlocal ts=2 sts=2 sw=2
-
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 au FileType go set noexpandtab
 au FileType go set shiftwidth=4
 au FileType go set softtabstop=4
