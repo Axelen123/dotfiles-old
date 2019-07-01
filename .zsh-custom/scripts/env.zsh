@@ -1,3 +1,4 @@
+ZLE_RPROMPT_INDENT=0
 export NVM_DIR="$HOME/.nvm"
 export GO111MODULE=on
 export PATH="$PATH:$HOME/.rvm/bin:"
@@ -8,3 +9,4 @@ source $HOME/.cargo/env
 
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 export GOPATH="$HOME/go"
+
