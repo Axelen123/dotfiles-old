@@ -13,6 +13,15 @@ You also need to configure your terminal
 to run your shell as a login shell (Gnome Terminal: Menu -> Preferences -> PROFILE (default: Unnamed) -> Command -> Run my shell as a login shell)
 
 ### Installation
+
+To install my dotfiles, simply symlink or copy these files/folders to your home:
+- repo/.zshrc -> ~/.zshrc
+- repo/.zsh-custom -> ~/.zsh-custom
+- repo/nvim -> ~/.config/nvim
+
+also run the `install.sh` script found inside the nvim folder (after you copy/symlink it!),
+after you are done you should run the `postinstall.sh` script to make sure that everything was installed properly.
+#### Install script (not recommended, experimental)
 ```sh
 # Make sure to backup your .dotfiles folder if you have one (and other files too incase something goes wrong)
 git clone https://github.com/Axelen123/dotfiles.git ~/.dotfiles
@@ -25,7 +34,7 @@ chsh -s /usr/bin/zsh
 exec zsh --login
 ```
 
-If you only want the NVIM config:
+#### NVim config only
 ```sh
 # Again, backup your nvim config and your .dotfiles folder if they exist
 git clone https://github.com/Axelen123/dotfiles.git ~/.dotfiles
