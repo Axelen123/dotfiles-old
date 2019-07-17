@@ -13,13 +13,28 @@ You also need to configure your terminal
 to run your shell as a login shell (Gnome Terminal: Menu -> Preferences -> PROFILE (default: Unnamed) -> Command -> Run my shell as a login shell)
 
 ### Installation
+First, install these things:
+- git
+- zsh
+- oh my zsh
+- rvm
+- nvm
+- gvm
+- rustup
+- neovim
+- ruby (installed using rvm)
+- node (installed using nvm)
+- go (installed using gvm)
+- rust (installed using rustup)
 
-To install my dotfiles, simply symlink or copy these files/folders to your home:
+Make sure that you have cloned the submodules using `git submodule update --init --recursive`
+
+To install my dotfiles, simply symlink or copy these files/folders to your home directory:
 - repo/.zshrc -> ~/.zshrc
 - repo/.zsh-custom -> ~/.zsh-custom
 - repo/nvim -> ~/.config/nvim
 
-also run the `install.sh` script found inside the nvim folder (after you copy/symlink it!),
+Also run the `install.sh` script found inside the nvim folder (after you copy/symlink it!),
 after you are done you should run the `postinstall.sh` script to make sure that everything was installed properly.
 #### Install script (not recommended, experimental)
 ```sh
