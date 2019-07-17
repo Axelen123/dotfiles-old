@@ -51,6 +51,10 @@ echo "pip3:"
 pip3 --version || true
 sep
 echo "nvim:"
-(nvim --version && (nvim --version | python2 -c 'import sys, re; print(re.match("^NVIM v(0.[3-9]+|[1-9]+.[0-9]+).[0-9]+", sys.stdin.read()))' | grep -q "None" && echo "\nNVIM version needs to be 0.3.0 or higher.\nDownload from https://github.com/neovim/neovim/releases/latest or build from source.")) || true
+if nvim --version; then
+    if ! nvim --version | grep -oP "NVIM v(0.[3-9]+|[1-9]+.[0-9]+).[0-9]+"; then
+        echo "NVIM version needs to be 0.3.0 or higher.\nDownload from https://github.com/neovim/neovim/releases/latest or build from source."
+    fi
+fi
 sep
 

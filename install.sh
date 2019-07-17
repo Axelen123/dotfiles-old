@@ -87,7 +87,7 @@ run bash https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-ins
 . ~/.gvm/scripts/gvm
 nvm install stable
 # Gets latest go version
-LATEST_GO=`gvm listall | python3 -c "import sys, re; r = re.compile(\"^go1.[0-9]+.[0-9]+$\"); print(\"\".join(list(filter(r.match, sys.stdin.read().split(\"   release.r\")[0].split(\"   \")))[-1].split(\"\n\")))"`
+LATEST_GO=`gvm listall | grep -oP "go1.[0-9]+.[0-9]+" | tail -n 1 | awk '{print $1}'`
 
 gvm install $LATEST_GO --prefer-binary
 gvm use $LATEST_GO --default
