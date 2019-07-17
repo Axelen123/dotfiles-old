@@ -95,6 +95,7 @@ if dein#load_state('~/.config/nvim/dein')
   call dein#add('mattn/emmet-vim')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('moll/vim-node')
+  call dein#add('takac/vim-hardtime') 
 
   call dein#end()
   call dein#save_state()

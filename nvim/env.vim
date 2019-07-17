@@ -121,6 +121,13 @@ let g:jsx_ext_required = 1
 let g:vim_vue_plugin_load_full_syntax = 1
 let g:vim_vue_plugin_debug = 1
 let g:yats_host_keyword = 1
+let g:hardtime_default_on = 1
+let g:list_of_normal_keys = ["h", "j", "k", "l", "+", "-"]
+let g:list_of_visual_keys = ["h", "j", "k", "l", "+", "-"]
+let g:list_of_insert_keys = []
+let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+let g:hardtime_showmsg = 1
+let g:hardtime_maxcount = 5
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 

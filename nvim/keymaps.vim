@@ -24,6 +24,16 @@ tnoremap <silent><C-f> <Esc> <C-\><C-n> :Defx<CR>
 inoremap <silent><C-s> <Esc> :w<CR>i
 nnoremap <silent><C-s> :w<CR>
 
+" Move in insert and command mode
+inoremap <A-h> <Left>
+inoremap <A-j> <Down>
+inoremap <A-k> <Up>
+inoremap <A-l> <Right>
+cnoremap <A-h> <Left>
+cnoremap <A-j> <Down>
+cnoremap <A-k> <Up>
+cnoremap <A-l> <Right>
+
 " Switch pane in split mode
 tnoremap <C-a> <C-w>w
 nnoremap <C-a> <C-w>w
